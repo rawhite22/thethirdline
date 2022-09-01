@@ -14,7 +14,7 @@ function Header() {
         padding: '1rem',
       }}>
       {' '}
-      <Link href='/'>
+      <Link style={{ cursor: 'pointer' }} href='/'>
         <p>The Third Line</p>
       </Link>
       <button onClick={() => setIsOpen(true)}>Seach for Player</button>
