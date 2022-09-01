@@ -6,6 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 
 .teamcode_team-stats .stats-container {

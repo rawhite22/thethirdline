@@ -2,9 +2,9 @@ import PageTransistion from '../../../components/PageTransition'
 import { getPlayer, getPlayerIds } from '../../../utils/getData'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import PlayerStats from '../../../components/PlayerStats'
+import GoalieStats from '../../../components/GoalieStats'
 function PlayerPage({ stats, info }) {
-  console.log(stats)
-  console.log(info)
   const { query } = useRouter()
   return (
     <PageTransistion>
@@ -12,8 +12,13 @@ function PlayerPage({ stats, info }) {
         <Link href={`/${query.teamCode}`}>Back To Team Page</Link>
         <h2>{info.fullName}</h2>
         <p>Position: {info.primaryPosition.name}</p>
-        <p>Number: {info.primaryNumber}</p>
+        <p>Number: {info?.primaryNumber || 'number not assigned yet'}</p>
       </section>
+      {info.primaryPosition.code === 'G' ? (
+        <GoalieStats stats={stats} />
+      ) : (
+        <PlayerStats stats={stats} />
+      )}
     </PageTransistion>
   )
 }

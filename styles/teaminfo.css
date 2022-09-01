@@ -12,4 +12,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.teamcode_team-info h2 {
+  margin-bottom: 0.5rem;
+}
+
+.teamcode_team-info img {
+  -webkit-filter: drop-shadow(1px 1px 1px #8f8f8f);
+          filter: drop-shadow(1px 1px 1px #8f8f8f);
 }

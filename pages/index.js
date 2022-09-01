@@ -9,7 +9,7 @@ import TeamSelect from '../components/TeamSelect'
 
 export default function Home({ teams }) {
   const [filteredTeams, setFilteredTeams] = useState(teams)
-  console.log(teams)
+
   return (
     <PageTransistion>
       <section className='home_team-select'>

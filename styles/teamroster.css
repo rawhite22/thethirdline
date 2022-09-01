@@ -1,3 +1,23 @@
+.teamcode_roster .player-select-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.teamcode_roster .player-select-container a {
+  color: white;
+  background-color: dodgerblue;
+  padding: 0.1rem 0.2rem;
+  border-radius: 3px;
+}
+
 .teamcode_roster .teamcode_roster--roster-filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,6 +26,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 
 .teamcode_roster .teamcode_roster--roster-filter .teamcode_roster--roster-filter-btn {
