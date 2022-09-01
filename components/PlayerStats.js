@@ -1,5 +1,4 @@
 function PlayerStats({ stats }) {
-  console.log(stats)
   if (stats.length < 1) {
     return (
       <section className='playerstats-container'>

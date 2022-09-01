@@ -1,0 +1,39 @@
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.search-container button {
+  margin-bottom: 1rem;
+}
+
+.search-container .player-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search-container .player-list button {
+  margin-bottom: 0.2rem;
+}
+
+.search-container label {
+  margin-bottom: 0.5rem;
+}
+
+.search-container input {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}

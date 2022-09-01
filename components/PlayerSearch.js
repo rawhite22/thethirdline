@@ -41,35 +41,37 @@ function PlayerSearch({ setIsOpen }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className='search'>
-      <button onClick={() => setIsOpen(false)}>Close</button>
-      {loading && <p>Updating Player Database</p>}
-      {allPlayers && (
-        <Fragment>
-          <label htmlFor='player'>Player: </label>
-          <input
-            id='player'
-            name='player'
-            type='search'
-            value={player}
-            placeholder='Enter Player Name'
-            onChange={(e) => handleChange(e)}
-          />
-        </Fragment>
-      )}
-      {filteredList && (
-        <div>
-          {filteredList.map((player) => (
-            <button
-              key={player.playerId}
-              onClick={() => {
-                setIsOpen(false)
-                router.push(`/${player.team}/${player.playerId}`)
-              }}>
-              <p>{player.player}</p>
-            </button>
-          ))}
-        </div>
-      )}
+      <div className='search-container'>
+        <button onClick={() => setIsOpen(false)}>Close</button>
+        {loading && <p>Updating Player Database</p>}
+        {allPlayers && (
+          <Fragment>
+            <label htmlFor='player'>Enter Players Name </label>
+            <input
+              id='player'
+              name='player'
+              type='search'
+              value={player}
+              placeholder='Adam Fox'
+              onChange={(e) => handleChange(e)}
+            />
+          </Fragment>
+        )}
+        {filteredList && (
+          <div className='player-list'>
+            {filteredList.map((player) => (
+              <button
+                key={player.playerId}
+                onClick={() => {
+                  setIsOpen(false)
+                  router.push(`/${player.team}/${player.playerId}`)
+                }}>
+                <p>{player.player}</p>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
     </motion.div>
   )
 }
