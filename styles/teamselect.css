@@ -1,0 +1,42 @@
+.team-select .division-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.team-select .home_team-select {
+  height: inherit;
+  overflow-y: scroll;
+}
+
+.team-select .team-select-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.team-select .img-container {
+  margin-bottom: 0.5rem;
+}
+
+.team-select a {
+  color: white;
+  background-color: dodgerblue;
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+}

@@ -12,7 +12,7 @@ export default function Home({ teams }) {
 
   return (
     <PageTransistion>
-      <section className='home_team-select'>
+      <section className='team-select'>
         <DivisionSelect teams={teams} filter={setFilteredTeams} />
         <TeamSelect teams={filteredTeams} />
       </section>

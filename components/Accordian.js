@@ -3,11 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDown } from '@fortawesome/pro-light-svg-icons'
 function Accordian({ title, children, show, setShow, rotation }) {
   return (
-    <>
+    <div className='accordian'>
       <div className='accordian_title'>
         <h2>{title}</h2>
         <motion.div animate={{ rotateX: rotation }}>
-          <FontAwesomeIcon icon={faDown} onClick={setShow} />
+          <div className='icon-container'>
+            <FontAwesomeIcon
+              icon={faDown}
+              onClick={setShow}
+              size='lg'
+              color='white'
+            />
+          </div>
         </motion.div>
       </div>
       <AnimatePresence initial={false} mode='wait'>
@@ -26,7 +33,7 @@ function Accordian({ title, children, show, setShow, rotation }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )
 }
 export default Accordian

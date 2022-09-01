@@ -2,7 +2,7 @@ import TeamSelectTeam from './TeamSelectTeam'
 
 function TeamSelect({ teams }) {
   return (
-    <section className='home_teams-list'>
+    <section className='team-select'>
       {teams.map((team) => (
         <TeamSelectTeam key={team.id} team={team} />
       ))}

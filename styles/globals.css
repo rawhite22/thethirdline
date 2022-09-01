@@ -7,6 +7,8 @@
 @import url('./playerpage.css');
 @import url('./search.css');
 @import url('./appheader.css');
+@import url('./accordian.css');
+@import url('./teamselect.css');
 /* universal */
 
 * {
@@ -59,30 +61,6 @@ button {
 .btn:hover {
   background-color: aliceblue;
 }
-/* homepage & components */
-.home_team-select {
-  height: inherit;
-  overflow-y: scroll;
-}
-.home_division-filter {
-  display: flex;
-  flex-direction: column;
-}
-.home_teams-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-/* accordian */
-.accordian_show-hide-content {
-  overflow: hidden;
-}
-.accordian_title {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
+
 @media (prefers-color-scheme: dark) {
 }

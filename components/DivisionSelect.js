@@ -58,7 +58,7 @@ function DivisionSelect({ filter, teams }) {
       show={showFilterOptions.visible}
       setShow={handleShow}
       rotation={showFilterOptions.rotation}>
-      <section className='home_division-filter'>
+      <section className='division-filter'>
         <button
           className='btn btn_division-select'
           onClick={(e) => handleTeamsFilter(e)}

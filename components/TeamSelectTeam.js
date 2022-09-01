@@ -4,10 +4,10 @@ function TeamSelectTeam({ team }) {
   return (
     <div className='team-select-team'>
       <h2>{team.name}</h2>
-      <div>
+      <div className='img-container'>
         <Image src={`/${team.id}.png`} height={100} width={140} />
       </div>
-      <Link href={`/${team.teamCode}`}>Go To Team Page</Link>
+      <Link href={`/${team.teamCode}`}>Team Page</Link>
     </div>
   )
 }
