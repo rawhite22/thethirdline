@@ -46,11 +46,18 @@ function DivisionSelect({ filter, teams }) {
         break
     }
   }
+  const handleShow = () => {
+    setShowFilterOptions((prevState) => ({
+      visible: !prevState.visible,
+      rotation: prevState.rotation + 180,
+    }))
+  }
   return (
     <Accordian
       title='Division Select'
-      show={showFilterOptions}
-      setShow={setShowFilterOptions}>
+      show={showFilterOptions.visible}
+      setShow={handleShow}
+      rotation={showFilterOptions.rotation}>
       <section className='home_division-filter'>
         <button
           className='btn btn_division-select'
