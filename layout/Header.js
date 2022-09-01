@@ -6,18 +6,12 @@ import PlayerSearch from '../components/PlayerSearch'
 function Header() {
   const [open, setIsOpen] = useState(false)
   return (
-    <header
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '1rem',
-      }}>
+    <header className='app-header'>
       {' '}
       <Link style={{ cursor: 'pointer' }} href='/'>
-        <p>The Third Line</p>
+        <h1>The Third Line</h1>
       </Link>
-      <button onClick={() => setIsOpen(true)}>Seach for Player</button>
+      <button onClick={() => setIsOpen(true)}>Player Search</button>
       <AnimatePresence>
         {open && (
           <ClientOnlyPortal selector='#player-search'>
