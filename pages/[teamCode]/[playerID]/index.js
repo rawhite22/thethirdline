@@ -4,12 +4,14 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import PlayerStats from '../../../components/PlayerStats'
 import GoalieStats from '../../../components/GoalieStats'
+import Image from 'next/image'
 function PlayerPage({ stats, info }) {
   const { query } = useRouter()
   return (
     <PageTransistion>
-      <section className='playerpage_info'>
+      <section className='playerpage-info'>
         <Link href={`/${query.teamCode}`}>Back To Team Page</Link>
+        <Image src={`/${info.currentTeam.id}.png`} height={50} width={75} />
         <h2>{info.fullName}</h2>
         <p>Position: {info.primaryPosition.name}</p>
         <p>Number: {info?.primaryNumber || 'number not assigned yet'}</p>

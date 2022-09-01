@@ -1,3 +1,12 @@
+.search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+
 .search-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,6 +22,8 @@
 
 .search-container button {
   margin-bottom: 1rem;
+  background-color: dodgerblue;
+  color: white;
 }
 
 .search-container .player-list {
@@ -27,6 +38,14 @@
 
 .search-container .player-list button {
   margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+}
+
+.search-container .player-list button:hover {
+  background-color: dodgerblue;
+  color: white;
 }
 
 .search-container label {
@@ -36,4 +55,5 @@
 .search-container input {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  padding: 0.2rem;
 }
