@@ -8,6 +8,7 @@
 @import url('./appheader.css');
 @import url('./accordian.css');
 @import url('./teamselect.css');
+@import url('./footer.css');
 /* universal */
 
 :root {
@@ -38,9 +39,15 @@ button {
 }
 .page-container {
   min-height: 100vh;
-  overflow-x: scroll;
+
   width: 100%;
   padding: 0 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-container {
+    padding: 0 100px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

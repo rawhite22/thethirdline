@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer style={{ padding: '1rem', textAlign: 'center' }}>
+    <footer className='footer'>
       {' '}
       <small>
         NHL and the NHL Shield are registered trademarks of the National Hockey

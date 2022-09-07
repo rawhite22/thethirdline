@@ -32,5 +32,6 @@
   color: var(--light-white-text);
   padding: 0.2rem 0.4rem;
   border-radius: 50%;
+  cursor: pointer;
   margin-right: 0.5rem;
 }

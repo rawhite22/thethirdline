@@ -32,10 +32,6 @@
   margin-bottom: 0;
 }
 
-.team-select .home_team-select {
-  height: inherit;
-}
-
 .team-select .team-select-team {
   display: -webkit-box;
   display: -ms-flexbox;

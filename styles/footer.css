@@ -1,0 +1,22 @@
+footer.footer {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  height: 10vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 676px) {
+  footer.footer {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    height: 10vh;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+  }
+}
