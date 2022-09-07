@@ -97,12 +97,61 @@
   margin-right: 0.5rem;
 }
 
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 660px) and (max-width: 926px) {
   .team-select {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    gap: 5px;
+    justify-items: stretch;
+    gap: 1rem;
+  }
+  .team-select .accordian {
+    grid-column: 1/-1;
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+  }
+  .team-select .team-select-team h2 {
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+  .team-select .team-select-team .img-container {
+    margin-bottom: 1rem;
+  }
+  .team-select .team-select-team .img-container img {
+    -webkit-filter: var(--light-logo-dropshadow);
+            filter: var(--light-logo-dropshadow);
+  }
+}
+
+@media screen and (min-width: 927px) {
+  .team-select {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    justify-items: stretch;
+    gap: 1rem;
+  }
+  .team-select .division-filter {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .team-select .division-filter .btn_division-select {
+    margin: 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100px;
+            flex: 1 0 100px;
+  }
+  .team-select .division-filter .btn_division-select:hover {
+    background-color: #555555;
+  }
+  .team-select .division-filter .btn_division-select:last-of-type {
+    margin-bottom: 1rem;
   }
   .team-select .accordian {
     grid-column: 1/-1;
