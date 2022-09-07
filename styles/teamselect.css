@@ -1,3 +1,10 @@
+.team-select {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
 .team-select .division-filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,4 +95,18 @@
   padding: 0.2rem;
   border-radius: 50%;
   margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 660px) {
+  .team-select {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 5px;
+  }
+  .team-select .accordian {
+    grid-column: 1/-1;
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+  }
 }
