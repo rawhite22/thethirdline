@@ -7,8 +7,13 @@ function TeamRoster({ roster, code }) {
   return (
     <section className='teamcode_roster'>
       <RosterFilter roster={roster} setFilteredRoster={setFilteredRoster} />
-      {filteredRoster.map((player) => (
-        <PlayerSelect key={player.person.id} player={player} code={code} />
+      {filteredRoster.map((player, index) => (
+        <PlayerSelect
+          index={index}
+          key={player.person.id}
+          player={player}
+          code={code}
+        />
       ))}
     </section>
   )

@@ -1,7 +1,11 @@
-import { Fragment, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleXmark, faHockeyMask } from '@fortawesome/pro-light-svg-icons'
+import PlayerSearchLoading from './PlayerSearchLoading'
+
 function PlayerSearch({ setIsOpen }) {
   const [player, setPlayer] = useState('')
   const [allPlayers, setAllPlayers] = useState(null)
@@ -42,12 +46,20 @@ function PlayerSearch({ setIsOpen }) {
       exit={{ opacity: 0 }}
       className='search'>
       <div className='search-container'>
-        <button onClick={() => setIsOpen(false)}>Close</button>
-        {loading && <p>Updating Player Database</p>}
+        <button className='exit-button' onClick={() => setIsOpen(false)}>
+          <FontAwesomeIcon icon={faCircleXmark} className='exit-button-icon' />
+        </button>
+        {loading && <PlayerSearchLoading />}
         {allPlayers && (
-          <Fragment>
-            <label htmlFor='player'>Enter Players Name </label>
+          <div className='input-group'>
+            <span>
+              <FontAwesomeIcon
+                className='input-group-icon'
+                icon={faHockeyMask}
+              />
+            </span>
             <input
+              className='search-input'
               id='player'
               name='player'
               type='search'
@@ -55,7 +67,8 @@ function PlayerSearch({ setIsOpen }) {
               placeholder='Adam Fox'
               onChange={(e) => handleChange(e)}
             />
-          </Fragment>
+            <div className='underline'></div>
+          </div>
         )}
         {filteredList && (
           <div className='player-list'>

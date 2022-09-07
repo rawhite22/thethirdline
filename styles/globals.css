@@ -11,8 +11,8 @@
 /* universal */
 
 :root {
-  --light-bg-darker: #f4f4f4;
-  --light-bg-lighter: #fafafa;
+  --light-bg-darker: #eaeaea;
+  --light-bg-lighter: #f6f6f6;
   --light-btn-background: rgba(30, 143, 255, 0.85);
   --light-white-text: #f4f4f4;
   --light-dark-text: #1d1d1d;

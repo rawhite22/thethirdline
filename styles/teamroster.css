@@ -16,6 +16,10 @@
           box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
 }
 
+.teamcode_roster .player-select-container.odd {
+  background-color: var(--light-bg-lighter);
+}
+
 .teamcode_roster .player-select-container a {
   font-size: 0.8rem;
   background-color: rgba(30, 143, 255, 0.85);
