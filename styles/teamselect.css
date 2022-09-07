@@ -28,10 +28,22 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.team-select .team-select-team.even {
+  background-color: #ececec;
 }
 
 .team-select .img-container {
   margin-bottom: 0.5rem;
+}
+
+.team-select .img-container img {
+  -webkit-filter: drop-shadow(1px 1px 1px #0000006e);
+          filter: drop-shadow(1px 1px 1px #0000006e);
 }
 
 .team-select a {
