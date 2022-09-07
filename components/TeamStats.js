@@ -30,7 +30,7 @@ function TeamStats({ stats }) {
   return (
     <section className='teamcode_team-stats'>
       <Accordian
-        title='Team Performance'
+        title='Performance'
         show={showStats.teamperformance.show}
         rotation={showStats.teamperformance.rotation}
         setShow={() => handleShow('teamperformance')}>
@@ -45,7 +45,7 @@ function TeamStats({ stats }) {
         </div>
       </Accordian>
       <Accordian
-        title='Team Scoring'
+        title='Scoring'
         show={showStats.teamscoring.show}
         rotation={showStats.teamscoring.rotation}
         setShow={() => handleShow('teamscoring')}>
@@ -58,7 +58,7 @@ function TeamStats({ stats }) {
         </div>
       </Accordian>
       <Accordian
-        title='Team Defense'
+        title='Defense'
         show={showStats.teamdefense.show}
         rotation={showStats.teamdefense.rotation}
         setShow={() => handleShow('teamdefense')}>

@@ -1,4 +1,9 @@
 .teamcode_team-info {
+  background-color: var(--light-bg-darker);
+  padding: 1rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,7 +17,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .teamcode_team-info h2 {

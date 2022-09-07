@@ -9,7 +9,7 @@ function Header() {
     <header className='app-header'>
       {' '}
       <Link style={{ cursor: 'pointer' }} href='/'>
-        <h1>The Third Line</h1>
+        <h1>The Third Line.</h1>
       </Link>
       <button onClick={() => setIsOpen(true)}>Player Search</button>
       <AnimatePresence>

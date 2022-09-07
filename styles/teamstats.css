@@ -20,6 +20,19 @@
   text-align: center;
 }
 
+.teamcode_team-stats .stats-container p {
+  background-color: var(--light-bg-lighter);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
+}
+
+.teamcode_team-stats .stats-container p:last-of-type {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 600px) {
   .stats-container {
     font-size: 0.9rem;

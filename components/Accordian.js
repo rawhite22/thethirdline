@@ -4,17 +4,10 @@ import { faDown } from '@fortawesome/pro-light-svg-icons'
 function Accordian({ title, children, show, setShow, rotation }) {
   return (
     <div className='accordian'>
-      <div className='accordian_title'>
+      <div className={show ? 'accordian_title open' : 'accordian_title'}>
         <h2>{title}</h2>
         <motion.div animate={{ rotateX: rotation }}>
-          <div className='icon-container'>
-            <FontAwesomeIcon
-              icon={faDown}
-              onClick={setShow}
-              size='lg'
-              color='white'
-            />
-          </div>
+          <FontAwesomeIcon className='icon' icon={faDown} onClick={setShow} />
         </motion.div>
       </div>
       <AnimatePresence initial={false} mode='wait'>

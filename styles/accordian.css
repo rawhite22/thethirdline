@@ -1,18 +1,9 @@
-.accordian .icon-container {
-  background-color: dodgerblue;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
+.accordian {
+  background-color: var(--light-bg-darker);
+  padding: 1rem;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
+  margin-bottom: 1rem;
 }
 
 .accordian .accordian_show-hide-content {
@@ -26,8 +17,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-bottom: 0.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.accordian .accordian_title.open {
+  margin-bottom: 1rem;
+}
+
+.accordian .accordian_title .icon {
+  font-size: 1.5rem;
+  background-color: rgba(30, 143, 255, 0.85);
+  color: var(--light-white-text);
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
 }

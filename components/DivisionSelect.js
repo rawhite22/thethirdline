@@ -60,32 +60,32 @@ function DivisionSelect({ filter, teams }) {
       rotation={showFilterOptions.rotation}>
       <section className='division-filter'>
         <button
-          className='btn btn_division-select'
+          className='btn_division-select'
           onClick={(e) => handleTeamsFilter(e)}
           id='Metro'>
           Metro
         </button>
         <button
-          className='btn btn_division-select'
+          className='btn_division-select'
           onClick={(e) => handleTeamsFilter(e)}
           id='Atlantic'>
           Atlantic
         </button>
         <button
-          className='btn btn_division-select'
+          className='btn_division-select'
           onClick={(e) => handleTeamsFilter(e)}
           id='Central'>
           Central
         </button>
         <button
-          className='btn btn_division-select'
+          className='btn_division-select'
           onClick={(e) => handleTeamsFilter(e)}
           id='Pacific'>
           Pacific
         </button>
 
         <button
-          className='btn btn_division-select'
+          className='btn_division-select'
           onClick={(e) => handleTeamsFilter(e)}
           id='NHL'>
           NHL

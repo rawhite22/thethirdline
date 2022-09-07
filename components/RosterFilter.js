@@ -29,19 +29,19 @@ function RosterFilter({ roster, setFilteredRoster }) {
         className='teamcode_roster--roster-filter-btn'
         onClick={(e) => handleRosterFilter(e)}
         id='F'>
-        Forward
+        F
       </button>
       <button
         className='teamcode_roster--roster-filter-btn'
         onClick={(e) => handleRosterFilter(e)}
         id='D'>
-        Defenseman
+        D
       </button>
       <button
         className='teamcode_roster--roster-filter-btn'
         onClick={(e) => handleRosterFilter(e)}
         id='G'>
-        Goalie
+        G
       </button>
       <button
         className='teamcode_roster--roster-filter-btn'

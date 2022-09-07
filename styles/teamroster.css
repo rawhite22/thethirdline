@@ -9,26 +9,50 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 0.5rem;
+  background-color: var(--light-bg-darker);
+  padding: 0.5rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
 }
 
 .teamcode_roster .player-select-container a {
-  color: white;
-  background-color: dodgerblue;
-  padding: 0.1rem 0.2rem;
+  font-size: 0.8rem;
+  background-color: rgba(30, 143, 255, 0.85);
+  color: var(--light-white-text);
+  padding: 0.2rem;
   border-radius: 3px;
+  border: none;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .teamcode_roster .teamcode_roster--roster-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 1rem;
+  background-color: var(--light-bg-darker);
+  padding: 1rem 0;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.119);
 }
 
 .teamcode_roster .teamcode_roster--roster-filter .teamcode_roster--roster-filter-btn {
-  margin-bottom: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: dodgerblue;
+  color: var(--light-white-text);
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.565);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.565);
 }
