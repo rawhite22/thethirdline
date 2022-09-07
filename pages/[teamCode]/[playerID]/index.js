@@ -11,10 +11,14 @@ function PlayerPage({ stats, info }) {
     <PageTransistion>
       <section className='playerpage-info'>
         <Link href={`/${query.teamCode}`}>Back To Team Page</Link>
-        <Image src={`/${info.currentTeam.id}.png`} height={50} width={75} />
-        <h2>{info.fullName}</h2>
-        <p>Position: {info.primaryPosition.name}</p>
-        <p>Number: {info?.primaryNumber || 'number not assigned yet'}</p>
+        <div className='image-container'>
+          <Image src={`/${info.currentTeam.id}.png`} height={50} width={75} />
+        </div>
+        <div className='text-container'>
+          <h2>{info.fullName}</h2>
+          <p>Position: {info.primaryPosition.name}</p>
+          <p>Number: {info?.primaryNumber || 'number not assigned yet'}</p>
+        </div>
       </section>
       {info.primaryPosition.code === 'G' ? (
         <GoalieStats stats={stats} />

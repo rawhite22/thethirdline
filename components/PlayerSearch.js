@@ -64,7 +64,7 @@ function PlayerSearch({ setIsOpen }) {
               name='player'
               type='search'
               value={player}
-              placeholder='Adam Fox'
+              placeholder='players name...'
               onChange={(e) => handleChange(e)}
             />
             <div className='underline'></div>

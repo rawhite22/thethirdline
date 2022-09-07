@@ -1,4 +1,5 @@
 .playerpage-info {
+  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,14 +7,50 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: var(--light-bg-darker);
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.playerpage-info .image-container {
+  margin-bottom: 0.5rem;
+}
+
+.playerpage-info .image-container img {
+  -webkit-filter: drop-shadow(1px 1px 1px #464646);
+          filter: drop-shadow(1px 1px 1px #464646);
 }
 
 .playerpage-info a {
   margin-bottom: 0.5rem;
+  background-color: dodgerblue;
+  color: var(--light-white-text);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.489);
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.489);
+}
+
+.playerstats-container {
+  background-color: var(--light-bg-darker);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.043);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.043);
+}
+
+.playerstats-container h3 {
+  margin-bottom: 0.3rem;
+}
+
+.playerstats-container p {
+  margin-bottom: 0.2rem;
 }
