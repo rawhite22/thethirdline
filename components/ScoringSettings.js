@@ -1,6 +1,18 @@
 import { useState } from 'react'
 import ScoreSelector from './ScoreSelector'
 
+const statCategory = [
+  'Goals',
+  'Assists',
+  'Shots',
+  'Hits',
+  'Blocks',
+  'Pims',
+  'PPP',
+  'SHP',
+  '+ / -',
+]
+
 function Category({ title, setScoringSettings }) {
   return (
     <div className='category'>
@@ -27,15 +39,13 @@ function ScoringSettings({ updateScoring }) {
   return (
     <>
       <div className='scoring-settings'>
-        <Category setScoringSettings={setScoringSettings} title={'Goals'} />
-        <Category setScoringSettings={setScoringSettings} title={'Assists'} />
-        <Category setScoringSettings={setScoringSettings} title={'Shots'} />
-        <Category setScoringSettings={setScoringSettings} title={'Hits'} />
-        <Category setScoringSettings={setScoringSettings} title={'Blocks'} />
-        <Category setScoringSettings={setScoringSettings} title={'Pims'} />
-        <Category setScoringSettings={setScoringSettings} title={'PPP'} />
-        <Category setScoringSettings={setScoringSettings} title={'SHP'} />
-        <Category setScoringSettings={setScoringSettings} title={'+ / -'} />
+        {statCategory.map((cat, index) => (
+          <Category
+            key={index}
+            setScoringSettings={setScoringSettings}
+            title={cat}
+          />
+        ))}
       </div>
       <p onClick={() => handleUpdateScoring()}>Set Scoring</p>
     </>

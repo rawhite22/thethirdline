@@ -13,15 +13,15 @@ export const FantasyScoringReducer = (state, action) => {
 export const FantasyScoringProvider = ({ children }) => {
   const [state, dispatch] = useReducer(FantasyScoringReducer, {
     scoring: {
-      goal: 5,
-      assist: 3,
-      shot: 0.3,
-      hit: 0.3,
-      block: 0.3,
-      pim: 1,
-      ppp: 1,
-      shp: 3,
-      plusMinus: 1,
+      goal: 8.5,
+      assist: 5,
+      shot: 1.5,
+      hit: 0,
+      block: 1.3,
+      pim: 0,
+      ppp: 0,
+      shp: 2,
+      plusMinus: 0,
     },
   })
   useEffect(() => {}, [])

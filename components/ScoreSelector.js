@@ -45,7 +45,12 @@ function ScoreSelector({ setScoringSettings, title }) {
   return (
     <div className='score-input'>
       <p onClick={() => setN(n - 1)}>-</p>
-      <input type='text' onChange={(e) => setN(e.target.value)} value={n} />
+      <input
+        type='number'
+        step='0.1'
+        onChange={(e) => setN(e.target.value)}
+        value={n}
+      />
       <p onClick={() => setN(n + 1)}>+</p>
     </div>
   )

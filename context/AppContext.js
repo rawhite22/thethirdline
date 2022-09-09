@@ -16,6 +16,8 @@ export const AppContextReducer = (state, action) => {
       const selected = state.playerCompare.filter((id) => id !== action.payload)
 
       return { ...state, playerCompare: selected }
+    case 'CLEAR_COMPARE':
+      return { ...state, playerCompare: [] }
     default:
       return state
   }

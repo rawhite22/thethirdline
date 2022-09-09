@@ -3,19 +3,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeSlash } from '@fortawesome/pro-light-svg-icons'
 
 function PlayerCompareCard({ info, stats, scoring }) {
-  console.log(scoring)
-  const fpgArr = [
-    stats.goals / stats.games,
-    stats.assists / stats.games,
-    stats.shots / stats.games,
-    stats.hits / stats.games,
-    stats.blocked / stats.games,
-    stats.pim / stats.games,
-    stats.powerPlayPoints / stats.games,
-    stats.shortHandedPoints / stats.games,
-    stats.plusMinus / stats.games,
-  ]
-  function fantasyPoints(g, a, sh, h, b, p, pp, shp, pm) {
+  if (!stats) {
+    stats = {
+      assists: 0,
+      blocked: 0,
+      games: 0,
+      goals: 0,
+      hits: 0,
+      overTimeGoals: 0,
+      pim: 0,
+      plusMinus: 0,
+      points: 0,
+      powerPlayGoals: 0,
+      powerPlayPoints: 0,
+      shortHandedPoints: 0,
+      shots: 0,
+    }
+  }
+  function fantasyPoints(g, a, sh, h, b, p, pp, shp, pm, gp) {
+    if (gp === 0) {
+      return 0
+    }
     let goals = Number((g * scoring.goal).toFixed(2))
     let assists = Number((a * scoring.assist).toFixed(2))
     let shots = Number((sh * scoring.shot).toFixed(2))
@@ -40,6 +48,18 @@ function PlayerCompareCard({ info, stats, scoring }) {
     return total.toFixed(2)
   }
   const [show, setShow] = useState(false)
+  const [fpgArr] = useState([
+    stats.goals / stats.games,
+    stats.assists / stats.games,
+    stats.shots / stats.games,
+    stats.hits / stats.games,
+    stats.blocked / stats.games,
+    stats.pim / stats.games,
+    stats.powerPlayPoints / stats.games,
+    stats.shortHandedPoints / stats.games,
+    stats.plusMinus / stats.games,
+    stats.games,
+  ])
   const [fpgScore, setFpgScore] = useState(fantasyPoints(...fpgArr))
   const perGame = (statLine) => {
     if (statLine !== Number) {
@@ -63,20 +83,24 @@ function PlayerCompareCard({ info, stats, scoring }) {
         <div className={show ? 'glass show' : 'glass'}></div>
         <h3>{info.fullName}</h3>
       </div>
-      <div className='stats'>
-        <h4>Per game average last season</h4>
-        <h5>{stats.games} out of 82 games</h5>
-        <p>Goals: {perGame(stats.goals)}</p>
-        <p>Assists: {perGame(stats.assists)}</p>
-        <p>Points: {perGame(stats.points)}</p>
-        <p>Power Play Points: {perGame(stats.powerPlayPoints)}</p>
-        <p>Short Handed Points: {perGame(stats.shortHandedPoints)}</p>
-        <p>Shots: {perGame(stats.shots)}</p>
-        <p>Blocks: {perGame(stats.blocked)}</p>
-        <p>Hits: {perGame(stats.hits)}</p>
-        <p>Penalty Minutes: {perGame(stats.pim)}</p>
-        <h5>Fantasy Points: {fpgScore}</h5>
-      </div>
+      {stats.games > 0 ? (
+        <div className='stats'>
+          <h4>Per game average last season</h4>
+          <h5>{stats.games} out of 82 games</h5>
+          <p>Goals: {perGame(stats.goals)}</p>
+          <p>Assists: {perGame(stats.assists)}</p>
+          <p>Points: {perGame(stats.points)}</p>
+          <p>Power Play Points: {perGame(stats.powerPlayPoints)}</p>
+          <p>Short Handed Points: {perGame(stats.shortHandedPoints)}</p>
+          <p>Shots: {perGame(stats.shots)}</p>
+          <p>Blocks: {perGame(stats.blocked)}</p>
+          <p>Hits: {perGame(stats.hits)}</p>
+          <p>Penalty Minutes: {perGame(stats.pim)}</p>
+          <h5>Fantasy Points: {fpgScore}</h5>
+        </div>
+      ) : (
+        <p>No stats to compile</p>
+      )}
     </div>
   )
 }
