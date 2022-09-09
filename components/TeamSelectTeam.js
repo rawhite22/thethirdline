@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleInfo } from '@fortawesome/pro-light-svg-icons'
 
 function TeamSelectTeam({ team, index }) {
-  console.log((index + 1) % 2)
   return (
     <div
       className={

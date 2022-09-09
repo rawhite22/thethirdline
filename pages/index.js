@@ -1,3 +1,5 @@
+// App level State
+import { useAppContext } from '../hooks/useAppContext'
 // component state
 import { useState } from 'react'
 // utils
@@ -6,10 +8,12 @@ import { getTeams } from '../utils/getData'
 import PageTransistion from '../components/PageTransition'
 import DivisionSelect from '../components/DivisionSelect'
 import TeamSelect from '../components/TeamSelect'
+import useHandleRouteChange from '../hooks/useHandleRouteChange'
 
 export default function Home({ teams }) {
+  const { dispatch } = useAppContext()
   const [filteredTeams, setFilteredTeams] = useState(teams)
-
+  useHandleRouteChange(dispatch)
   return (
     <PageTransistion>
       <section className='team-select'>

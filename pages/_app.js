@@ -1,5 +1,6 @@
 // next
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 // animations
 import { AnimatePresence } from 'framer-motion'
 // styles
@@ -8,6 +9,10 @@ import '../styles/globals.css'
 import '@fortawesome/fontawesome-svg-core/styles.css' // import Font Awesome CSS
 import { config } from '@fortawesome/fontawesome-svg-core'
 import Layout from '../layout'
+import { useEffect } from 'react'
+import { AppContextReducer } from '../context/AppContext'
+import { AppContextProvider } from '../context/AppContext'
+import { FantasyScoringProvider } from '../context/FantasyScoringContext'
 config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 function MyApp({ Component, pageProps, router }) {
@@ -24,11 +29,15 @@ function MyApp({ Component, pageProps, router }) {
         <meta charSet='UTF-8' />
         <link rel='shortcut icon' type='image/png' href='/nhl.png' />
       </Head>
-      <Layout>
-        <AnimatePresence mode='wait' initial={false}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Layout>
+      <AppContextProvider>
+        <Layout>
+          <AnimatePresence mode='wait' initial={false}>
+            <FantasyScoringProvider>
+              <Component {...pageProps} key={router.route} />
+            </FantasyScoringProvider>
+          </AnimatePresence>
+        </Layout>
+      </AppContextProvider>
     </>
   )
 }

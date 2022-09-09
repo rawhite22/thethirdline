@@ -1,0 +1,32 @@
+.compare .player-compare {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.compare .player-compare .compare-card .info {
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+  border-radius: 3px;
+}
+
+.compare .player-compare .compare-card .info .glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  padding: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.compare .player-compare .compare-card .info .glass.show {
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+  opacity: 0;
+}

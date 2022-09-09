@@ -1,12 +1,15 @@
 import PageTransistion from '../../../components/PageTransition'
 import { getPlayer, getPlayerIds } from '../../../utils/getData'
-import { useRouter } from 'next/router'
+
 import Link from 'next/link'
 import PlayerStats from '../../../components/PlayerStats'
 import GoalieStats from '../../../components/GoalieStats'
 import Image from 'next/image'
+import useHandleRouteChange from '../../../hooks/useHandleRouteChange'
+import { useAppContext } from '../../../hooks/useAppContext'
 function PlayerPage({ stats, info }) {
-  const { query } = useRouter()
+  const { dispatch } = useAppContext()
+  const { query } = useHandleRouteChange(dispatch)
   return (
     <PageTransistion>
       <section className='playerpage-info'>

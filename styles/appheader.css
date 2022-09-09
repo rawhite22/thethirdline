@@ -27,3 +27,11 @@
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+.app-header button:disabled {
+  background-color: rgba(22, 64, 107, 0.85);
+}
+
+.app-header button:last-of-type {
+  margin-left: 1rem;
+}

@@ -6,7 +6,6 @@ function DivisionSelect({ filter, teams }) {
     rotation: 0,
   })
   const handleTeamsFilter = (e) => {
-    console.log(e.target.id)
     switch (e.target.id) {
       case 'Metro':
         filter(teams.filter((team) => team.division === 'Metropolitan'))

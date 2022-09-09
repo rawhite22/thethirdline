@@ -3,9 +3,12 @@ import TeamInfo from '../../components/TeamInfo'
 import TeamRoster from '../../components/TeamRoster'
 import TeamStats from '../../components/TeamStats'
 import { getTeams, getTeamRoster } from '../../utils/getData'
-import { useRouter } from 'next/router'
+import useHandleRouteChange from '../../hooks/useHandleRouteChange'
+import { useAppContext } from '../../hooks/useAppContext'
 function TeamPage({ data }) {
-  const { query } = useRouter()
+  const { dispatch } = useAppContext()
+  const { query } = useHandleRouteChange(dispatch)
+
   return (
     <PageTransistion>
       <TeamInfo info={data.teaminfo} />
