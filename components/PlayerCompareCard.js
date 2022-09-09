@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeSlash } from '@fortawesome/pro-light-svg-icons'
 
 function PlayerCompareCard({ info, stats, scoring }) {
+  console.log(scoring)
   const fpgArr = [
     stats.goals / stats.games,
     stats.assists / stats.games,
@@ -15,12 +16,12 @@ function PlayerCompareCard({ info, stats, scoring }) {
     stats.plusMinus / stats.games,
   ]
   function fantasyPoints(g, a, sh, h, b, p, pp, shp, pm) {
-    let goals = Number((g * scoring.goals).toFixed(2))
-    let assists = Number((a * scoring.assists).toFixed(2))
-    let shots = Number((sh * scoring.shots).toFixed(2))
-    let hits = Number((h * scoring.hits).toFixed(2))
-    let blocks = Number((b * scoring.blocks).toFixed(2))
-    let pims = Number((p * scoring.pims).toFixed(2))
+    let goals = Number((g * scoring.goal).toFixed(2))
+    let assists = Number((a * scoring.assist).toFixed(2))
+    let shots = Number((sh * scoring.shot).toFixed(2))
+    let hits = Number((h * scoring.hit).toFixed(2))
+    let blocks = Number((b * scoring.block).toFixed(2))
+    let pims = Number((p * scoring.pim).toFixed(2))
     let powerplaypoint = Number((pp * scoring.ppp).toFixed(2))
     let shorthandedpoint = Number((shp * scoring.shp).toFixed(2))
     let plusminus = Number((pm * scoring.plusMinus).toFixed(2))

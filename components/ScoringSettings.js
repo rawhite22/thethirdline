@@ -15,11 +15,11 @@ function ScoringSettings({ updateScoring }) {
     updateScoring({ type: 'Updated Scoring', payload: scoringSettings })
   }
   const [scoringSettings, setScoringSettings] = useState({
-    goals: 0,
-    assists: 0,
-    shots: 0,
-    blocks: 0,
-    pims: 0,
+    goal: 0,
+    assist: 0,
+    shot: 0,
+    block: 0,
+    pim: 0,
     ppp: 0,
     shp: 0,
     plusMinus: 0,

@@ -5,25 +5,25 @@ function ScoreSelector({ setScoringSettings, title }) {
   useEffect(() => {
     switch (title) {
       case 'Goals':
-        setScoringSettings((prevState) => ({ ...prevState, goals: Number(n) }))
+        setScoringSettings((prevState) => ({ ...prevState, goal: Number(n) }))
         break
       case 'Assists':
         setScoringSettings((prevState) => ({
           ...prevState,
-          assists: Number(n),
+          assist: Number(n),
         }))
         break
       case 'Shots':
-        setScoringSettings((prevState) => ({ ...prevState, shots: Number(n) }))
+        setScoringSettings((prevState) => ({ ...prevState, shot: Number(n) }))
         break
       case 'Hits':
-        setScoringSettings((prevState) => ({ ...prevState, hits: Number(n) }))
+        setScoringSettings((prevState) => ({ ...prevState, hit: Number(n) }))
         break
       case 'Blocks':
-        setScoringSettings((prevState) => ({ ...prevState, blocks: Number(n) }))
+        setScoringSettings((prevState) => ({ ...prevState, block: Number(n) }))
         break
       case 'Pims':
-        setScoringSettings((prevState) => ({ ...prevState, pims: Number(n) }))
+        setScoringSettings((prevState) => ({ ...prevState, pim: Number(n) }))
         break
       case 'PPP':
         setScoringSettings((prevState) => ({ ...prevState, ppp: Number(n) }))
