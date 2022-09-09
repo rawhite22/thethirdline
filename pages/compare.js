@@ -57,7 +57,7 @@ function Compare() {
     if (playerCompare.length > 1) {
       getData()
     }
-  }, [])
+  }, [playerCompare])
 
   return (
     <PageTransistion>

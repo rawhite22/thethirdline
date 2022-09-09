@@ -10,7 +10,6 @@ import '@fortawesome/fontawesome-svg-core/styles.css' // import Font Awesome CSS
 import { config } from '@fortawesome/fontawesome-svg-core'
 import Layout from '../layout'
 import { useEffect } from 'react'
-import { AppContextReducer } from '../context/AppContext'
 import { AppContextProvider } from '../context/AppContext'
 import { FantasyScoringProvider } from '../context/FantasyScoringContext'
 config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
