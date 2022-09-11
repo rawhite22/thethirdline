@@ -11,7 +11,12 @@ function TeamSelectTeam({ team, index }) {
       }>
       <h2>{team.name}</h2>
       <div className='img-container'>
-        <Image src={`/${team.id}.png`} height={100} width={140} />
+        <Image
+          src={`/${team.id}.png`}
+          height={100}
+          width={140}
+          alt='Team Logo'
+        />
       </div>
 
       <Link href={`/${team.teamCode}`}>

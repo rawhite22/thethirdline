@@ -72,6 +72,7 @@ function Compare() {
           {compareData &&
             compareData.map((player) => (
               <PlayerCompareCard
+                key={player.info.id}
                 stats={player.stats}
                 info={player.info}
                 scoring={scoring}
