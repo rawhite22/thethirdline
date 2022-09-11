@@ -18,15 +18,16 @@ function Compare() {
     }
     const getData = async () => {
       playerCompare.forEach(async (id) => {
+        const responseInfo = await fetch(
+          `https://statsapi.web.nhl.com/api/v1/people/${id}`
+        )
+        const dataInfo = await responseInfo.json()
+
         const response = await fetch(
           `https://statsapi.web.nhl.com/api/v1/people/${id}/stats?stats=statsSingleSeason`
         )
         const data = await response.json()
 
-        const responseInfo = await fetch(
-          `https://statsapi.web.nhl.com/api/v1/people/${id}`
-        )
-        const dataInfo = await responseInfo.json()
         if (data.stats[0].splits.length === 0) {
           const player = {
             info: dataInfo.people[0],
